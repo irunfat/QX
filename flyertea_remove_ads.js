@@ -16,4 +16,5 @@ if(ad_url_regex.test($request.url)){
 }
 
 body=JSON.stringify(body);
+console.log(body);
 $done({body});
