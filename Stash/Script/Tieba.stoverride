@@ -10,16 +10,7 @@ http:
       type: response
       require-body: false
       timeout: 10
-
-    - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
-      name: tiebaproto
-      type: response
-      require-body: false
-      timeout: 10
-
 script-providers:
   tieba:
     url: https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
-  tiebaproto
-    url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
 

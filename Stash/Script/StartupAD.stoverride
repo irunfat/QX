@@ -1,0 +1,41 @@
+name: 部分APP开屏去广告
+desc: 具体APP请直接进入链接查看
+
+http:
+  mitm:
+    - "app.bilibili.com"
+    - "wmapi.meituan.com"
+    - "api.m.jd.com"
+  script:
+# BiliBili
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
+      name: biliAD
+      type: response
+      require-body: true
+      timeout: 10
+# 美团外卖
+    - match: ^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?
+      name: meituan
+      type: response
+      require-body: true
+      timeout: 10
+# 京东
+    - match: ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start
+      name: jingdong
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+# BiliBili
+  biliAD:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
+    interval: 3600
+# 美团外卖
+  meituan:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+    interval: 3600
+# 京东
+  jingdong:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+    interval: 3600
