@@ -1,5 +1,5 @@
-name: 百度去广告
-desc: app2smile百度移除广告
+name: 什么值得买去广告
+desc: 什么值得买去广告
 
 http:
   mitm:
