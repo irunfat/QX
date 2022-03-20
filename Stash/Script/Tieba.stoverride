@@ -8,9 +8,11 @@ http:
     - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
       name: tieba
       type: response
-      require-body: false
+      require-body: true
       timeout: 10
 script-providers:
   tieba:
     url: https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+    interval: 3600
+
 
