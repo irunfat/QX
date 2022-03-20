@@ -1,5 +1,5 @@
 name: 百度去广告
-desc: 百度移除广告
+desc: app2smile百度移除广告
 
 http:
   mitm:
@@ -25,3 +25,6 @@ script-providers:
     url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
     interval: 3600
 
+rules:
+  - IP-CIDR,180.76.76.200/32,REJECT
+  - DOMAIN,im.tieba.baidu.com,REJECT
