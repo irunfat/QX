@@ -1,0 +1,31 @@
+name: 百度去广告
+desc: 百度移除广告
+
+http:
+  mitm:
+    - "afd.baidu.com"
+  script:
+    - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
+      name: Tieba
+      type: response
+      require-body: false
+      timeout: 10
+
+    - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
+      name: Tieba-Proto
+      type: response
+      require-body: false
+      timeout: 10
+
+
+
+
+script-providers:
+  Tieba:
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+  Tieba-Proto
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
+
+rules:
+  - IP-CIDR,180.76.76.200/32,REJECT
+  - DOMAIN,im.tieba.baidu.com,REJECT
