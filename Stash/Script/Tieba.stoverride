@@ -4,7 +4,6 @@ desc: 百度移除广告
 http:
   mitm:
     - "afd.baidu.com"
-    - "afd.baidu.com"
   script:
     - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
       name: tieba
@@ -12,7 +11,7 @@ http:
       require-body: true
       timeout: 10
 
-    - match: ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry)
+    - match: ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)
       name: tiebaproto
       type: response
       require-body: true
@@ -20,7 +19,7 @@ http:
 
 script-providers:
   tieba:
-    url: https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
     interval: 3600
   tiebaproto:
     url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
