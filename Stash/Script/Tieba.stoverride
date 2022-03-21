@@ -2,6 +2,8 @@ name: 百度去广告
 desc: app2smile百度移除广告
 
 http:
+  force-http-engine:
+    - afd.baidu.com
   mitm:
     - "afd.baidu.com"
   script:
