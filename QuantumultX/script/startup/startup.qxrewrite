@@ -18,14 +18,14 @@
 ^https:\/\/m\.ctrip\.com\/restapi\/.+\/json\/tripAds url reject
 
 # 百度地图开屏广告
-^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.jpg url reject
+^https:\/\/dss0\.bdstatic\.com\/.+\/tam-ogel\/.+\.jpg url reject
 
 # 铁路12306开屏广告(倒计时仍然存在）
 https://ad.12306.cn/* url reject
 
 # 飞客茶馆（请清除缓存使用）
 # 开屏广告
-^https?:\/\/ptf.flyertrip.com\/common\/cf\/.+\.jpg url reject
+^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.+\.jpg url reject
 
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
 # 目录广告
@@ -34,4 +34,4 @@ https://ad.12306.cn/* url reject
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/fly.js
 
 
-hostname = wmapi.meituan.com,app.bilibili.com,api.m.jd.com,biz.caiyunapp.com,v.icbc.com.cn,,m.ctrip.com,*.bdstatic.com,ad.12306.cn,47.100.65.202sf?-ttcdn-tos.pstatp.com
+hostname = wmapi.meituan.com,app.bilibili.com,api.m.jd.com,biz.caiyunapp.com,v.icbc.com.cn,,m.ctrip.com,*.bdstatic.com,ad.12306.cn,47.100.65.202sf?-ttcdn-tos.pstatp.com,ptf.flyertrip.com
