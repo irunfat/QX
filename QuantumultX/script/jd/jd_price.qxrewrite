@@ -1,4 +1,0 @@
-
-^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js
-
-hostname = api.m.jd.com
